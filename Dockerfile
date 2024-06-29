@@ -5,7 +5,8 @@ FROM webis/ir-lab-wise-2023:0.0.4
 RUN pip3 uninstall -y tira \
 	&& pip3 install tira
 
-RUN python -m spacy download en_core_web_md
+RUN pip3 download https://github.com/explosion/spacy-models/releases/download/en_core_web_md-2.2.0/en_core_web_md-2.2.0.tar.gz
+RUN pip3 install /en_core_web_md-2.1.0.tar.gz
 
 ADD . /app
 
