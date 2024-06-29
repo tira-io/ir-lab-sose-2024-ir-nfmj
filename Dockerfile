@@ -5,7 +5,7 @@ FROM webis/ir-lab-wise-2023:0.0.4
 RUN pip3 uninstall -y tira \
 	&& pip3 install tira
 
-RUN python -m spacy download en_core_web_sm
+RUN python -m spacy download en_core_web_md
 
 ADD . /app
 
