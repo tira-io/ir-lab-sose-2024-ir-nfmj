@@ -6,6 +6,7 @@ RUN pip3 uninstall -y tira \
 	&& pip3 install tira
 
 RUN pip3 install spacy
+RUN python3 -m spacy download en_core_web_md
 
 ADD . /app
 
